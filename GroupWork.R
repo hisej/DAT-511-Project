@@ -96,3 +96,6 @@ tidy_dataset <- extracted_data %>%
 
 # Save the tidy dataset to a text file
 write.table(tidy_dataset, file = "tidy_dataset.txt", row.names = FALSE)
+
+# Save the tidy dataset to a csv file
+write.csv(tidy_dataset, file = "tidy_dataset.csv", row.names = FALSE)
