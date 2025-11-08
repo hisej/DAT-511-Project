@@ -16,6 +16,8 @@ Prepared by Julia Hise for DAT 511 Project
 
 The original dataset was obtained from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones). It contains sensor signals collected from smartphones worn by 30 subjects performing six activities.
 
+First, I downloaded this dataset and unzipped the  downloaded folder into a folder I named "UCI HAR Dataset".
+
 ---
 
 ## Data Cleaning and Transformation Steps
@@ -40,7 +42,7 @@ The original dataset was obtained from the [UCI Machine Learning Repository](htt
 5. **Created final tidy dataset**  
    - Grouped by `subject` and `activity`
    - Calculated the average of each variable for each group
-   - Saved as `tidy_dataset.txt`
+   - Saved as `tidy_dataset.txt` and `tidy_dataset.csv`
 
 ---
 
@@ -79,6 +81,8 @@ The original dataset was obtained from the [UCI Machine Learning Repository](htt
 
 No missing values were present in the original dataset. All sensor measurements were complete across subjects and activities. Therefore, no imputation, interpolation, or removal of rows was necessary.
 
+This completeness is likely due to the controlled data collection methods used in the original study.
+
 ---
 
 ## Code Instructions
@@ -88,7 +92,7 @@ To reproduce the tidy dataset:
 1. Open `GroupWork.R` in RStudio.
 2. Ensure the unzipped `"UCI HAR Dataset"` folder is in the same directory as your script.
 3. Run the script from top to bottom.
-4. The final tidy dataset will be saved as `tidy_dataset.txt`.
+4. The final tidy dataset will be saved as `tidy_dataset.txt` and `tidy_dataset.csv` (depending on the preferred format).
 
 Required R packages:
 ```r
@@ -99,5 +103,6 @@ library(dplyr)
 
 ## File Output
 
-- `tidy_dataset.txt`: Final tidy dataset with 180 rows (30 subjects × 6 activities) and 50+ variables  
+- `tidy_dataset.txt`/`tidy_dataset.csv`: Final tidy dataset with 180 rows (30 subjects × 6 activities) and 50+ variables  
 - Saved in the `directory` folder, without row names
+
